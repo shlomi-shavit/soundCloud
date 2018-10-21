@@ -1,0 +1,70 @@
+/*---------------------- TABLE OF CSS CONTENT ------------------------ [*] Reset [1] Variables [2] Global style [3] Container [*] Media query */
+/* ------------------
+[*] Reset
+-------------------*/
+@import url("reset.css");
+/* ------------------
+[1] Variables
+-------------------*/
+/* ------------------
+[1] Global style
+-------------------*/
+@keyframes fadeIn { 0% { transform: scale(2); }
+  100% { transform: scale(1); } }
+
+@keyframes fadeOut { from { transform: scale(1); }
+  to { transform: scale(0.7); } }
+
+body { background: #e0dada; display: flex; align-items: center; justify-content: center; height: 100vh; overflow: hidden; }
+
+.sound-cloud { background-image: linear-gradient(to bottom, #ff851e, #da421a); width: 100%; height: 100%; max-width: 760px; max-height: 420px; display: flex; box-shadow: 0 0px 180px -20px; padding: 0 5px; position: relative; }
+
+.sound-cloud:after { content: ""; background-image: url(http://www.cecilmusic.co.uk/wp-content/uploads/2018/02/soundcloud-logo-transparent-white.png); width: 160px; display: block; position: absolute; top: 0; bottom: 0; right: 155px; margin: auto; background-position: 50%; background-size: 100%; background-repeat: no-repeat; z-index: 0; opacity: .8; }
+
+.sound-cloud__history-btn { text-align: right; padding: 0 0 5px; opacity: 1; pointer-events: auto; cursor: pointer; }
+
+.sound-cloud__history-btn.disabled { opacity: .3; pointer-events: none; }
+
+.sound-cloud__clear-history-btn { position: absolute; bottom: 50px; right: 15px; font-size: 13px; color: #888; cursor: pointer; }
+
+.sound-cloud__clear-history-btn.disabled { display: none; }
+
+.sound-cloud__input-container { display: flex; padding: 5px 0; height: 50px; }
+
+.sound-cloud__search-input { width: 100%; border: none; padding-left: 5px; }
+
+.sound-cloud__search-btn { background-color: #58bd58; cursor: pointer; width: 40%; margin-left: 5px; text-align: center; display: flex; justify-content: center; align-items: center; color: #fff; }
+
+.sound-cloud__search-btn.disabled { opacity: .5; pointer-events: none; }
+
+.sound-cloud__search-part, .sound-cloud__iframe-container { display: flex; flex-direction: column; padding: 5px; }
+
+.sound-cloud__search-part { width: 40%; position: relative; }
+
+.sound-cloud__search-results { height: 100%; background-color: #fff; overflow-y: auto; overflow-x: hidden; }
+
+.sound-cloud__search-results li { font-size: 12px; margin: 5px 0; padding: 5px; cursor: pointer; border-bottom: solid 2px #474747; }
+
+.sound-cloud__search-results .clear-history-btn { position: absolute; bottom: 0; right: 0; font-size: 12px; color: #888; padding: 10px; cursor: pointer; }
+
+.sound-cloud__iframe-container { justify-content: center; align-items: center; width: 60%; opacity: 0; transition: all .5s; }
+
+.sound-cloud__iframe-container iframe { z-index: 1; animation: fadeOut .5s; }
+
+.sound-cloud__iframe-container.fadeAnimation { opacity: 1; }
+
+.sound-cloud__iframe-container.fadeAnimation iframe { animation: fadeIn 1s; }
+
+.sound-cloud__navigation { display: flex; justify-content: space-between; padding: 10px 0; color: #fff; }
+
+.sound-cloud__navigation--prev, .sound-cloud__navigation--next { opacity: .5; pointer-events: none; cursor: pointer; font-size: 18px; }
+
+.sound-cloud__navigation--prev.btn-active, .sound-cloud__navigation--next.btn-active { opacity: 1; pointer-events: auto; color: #08d8c8; }
+
+.disabled .sound-cloud__navigation--prev, .disabled .sound-cloud__navigation--next { opacity: .5; color: #fff; pointer-events: none; }
+
+/* ------------------
+[*] Media query
+-------------------*/
+
+/*# sourceMappingURL=style.css.map */

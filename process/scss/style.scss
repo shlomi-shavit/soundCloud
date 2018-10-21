@@ -1,0 +1,208 @@
+/*----------------------
+  TABLE OF CSS CONTENT
+------------------------
+  [*] Reset
+  [1] Variables
+  [2] Global style
+  [3] Container
+  [*] Media query
+*/
+
+/* ------------------
+[*] Reset
+-------------------*/
+@import url('reset.css');
+
+/* ------------------
+[1] Variables
+-------------------*/
+$global-padding: 5px;
+$background-color: #474747;
+/* ------------------
+[1] Global style
+-------------------*/
+
+@keyframes fadeIn {
+  0%   { transform: scale(2) }
+  //50%   { transform: scale(.7) }
+  100% { transform: scale(1) }
+}
+@keyframes fadeOut {
+  from {transform: scale(1)}
+  to {transform: scale(.7)}
+}
+
+body{
+  background: #e0dada;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+// Sound cloud wrapper
+.sound-cloud {
+  background-image: linear-gradient(to bottom, #ff851e, #da421a);
+  width: 100%;
+  height: 100%;
+  max-width: 760px;
+  max-height: 420px;
+  display: flex;
+  box-shadow: 0 0px 180px -20px;
+  padding: 0 $global-padding;
+  position: relative;
+  &:after {
+    content: "";
+    background-image: url(http://www.cecilmusic.co.uk/wp-content/uploads/2018/02/soundcloud-logo-transparent-white.png);
+    width: 160px;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 155px;
+    margin: auto;
+    background-position: 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 0;
+    opacity: .8;
+  }
+
+  &__history {
+    &-btn{
+      text-align: right;
+      padding: 0 0 5px;
+      opacity: 1;
+      pointer-events: auto;
+      cursor: pointer;
+      &.disabled {
+        opacity: .3;
+        pointer-events: none;
+      }
+    }
+  }
+  &__clear-history-btn {
+    position: absolute;
+    bottom: 50px;
+    right: 15px;
+    font-size: 13px;
+    color: #888;
+    cursor: pointer;
+    &.disabled {
+      display: none;
+    }
+  }
+  // Input container
+  &__input-container {
+    display: flex;
+    padding: $global-padding 0;
+    height: 50px;
+  }
+  &__search-input {
+    width: 100%;
+    border: none;
+    padding-left: $global-padding;
+  }
+  &__search-btn {
+    background-color: #58bd58;
+    cursor: pointer;
+    width: 40%;
+    margin-left: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    &.disabled {
+      opacity: .5;
+      pointer-events: none;
+    }
+    //pointer-events: none;
+  }
+
+  &__search-part,
+  &__iframe-container {
+    display: flex;
+    flex-direction: column;
+    padding: $global-padding;
+  }
+
+
+  // Left part search result container
+  &__search-part {
+    width: 40%;
+    position: relative;
+  }
+  &__search-results {
+    height: 100%;
+    background-color: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    li {
+      font-size: 12px;
+      margin: $global-padding 0;
+      padding: $global-padding;
+      cursor: pointer;
+      border-bottom: solid 2px $background-color;
+    }
+    .clear-history-btn {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: 12px;
+      color: #888;
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
+
+  // Right part
+  &__iframe-container {
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    opacity: 0;
+    transition: all .5s;
+    iframe {
+      z-index: 1;
+      animation: fadeOut .5s;
+    }
+    &.fadeAnimation {
+      opacity: 1;
+      iframe {
+        animation: fadeIn 1s;
+      }
+    }
+  }
+
+  // Navigation part
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    color: #fff;
+    &--prev,
+    &--next {
+      opacity: .5;
+      pointer-events: none;
+      cursor: pointer;
+      font-size: 18px;
+      &.btn-active {
+        opacity: 1;
+        pointer-events: auto;
+        color: #08d8c8;
+      }
+      .disabled &{
+        opacity: .5;
+        color: #fff;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+
+/* ------------------
+[*] Media query
+-------------------*/

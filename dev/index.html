@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> - Sound Cloud -</title>
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+<div class="sound-cloud">
+    <div class="sound-cloud__search-part">
+        <!-- Search input & button -->
+        <div class="sound-cloud__input-container">
+            <input id="soundCloudSearch" class="sound-cloud__search-input" placeholder="Search">
+            <div class="sound-cloud__search-btn disabled" >Go</div>
+        </div>
+
+        <div class="sound-cloud__history-btn disabled">history</div>
+
+        <!-- Search results -->
+        <ul class="sound-cloud__search-results"></ul>
+        <div class="sound-cloud__clear-history-btn disabled">Clear history</div>
+
+        <!-- Search navigation -->
+        <div class="sound-cloud__navigation">
+            <div class="sound-cloud__navigation--prev">&#9668</div>
+            <div class="sound-cloud__navigation--next">&#9658</div>
+        </div>
+    </div>
+
+    <div class="sound-cloud__iframe-container"></div>
+
+</div>
+
+<!-- scripts -->
+<!-- Sound Cloud API -->
+<script src="https://connect.soundcloud.com/sdk/sdk-3.3.0.js"></script>
+<!-- soundCloud -->
+<script src="js/script.js"></script>
+<!-- /scripts -->
+
+</body>
+
+</html>

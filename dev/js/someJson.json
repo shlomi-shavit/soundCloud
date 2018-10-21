@@ -1,0 +1,64 @@
+{
+  "feed": [
+    {
+      "id": "https://www.thelotter.com/play.aspx?lotteryid=60&itemid=1",
+      "last_draw_date": "15/09/2017 04:00:00 AM GMT",
+      "last_draw_results": "7;11;33;60;68 + 15",
+      "lottery_logo": "http://design.des/[LP]/lotto_LP/bestLotteryTest/img/megaMillions_210x100.png",
+      "lottery_name": "U.S. - Mega Millions",
+      "next_draw_date": "18/02/2017 04:00:00 AM GMT",
+      "next_draw_jackpot": "$ 46 Million",
+      "play_link": "https://www.thelotter.com/play.aspx?lotteryid=60&itemid=1",
+      "numbers_range": {
+        "amount_to_draw": 5,
+        "min_number": 1,
+        "max_number": 75
+      },
+      "strong_number_range": {
+        "amount_to_draw": 1,
+        "min_number": 1,
+        "max_number": 15
+      }
+    },
+    {
+      "id": "https://www.thelotter.com/play.aspx?lotteryid=99&itemid=1",
+      "last_draw_date": "14/10/2017 08:00:00 PM GMT",
+      "last_draw_results": "2;10;24;40;44 + 3;10",
+      "lottery_logo": "http://design.des/[LP]/lotto_LP/bestLotteryTest/img/euroMillioins_210x100.png",
+      "lottery_name": "Spain - EuroMillions",
+      "next_draw_date": "17/02/2017 08:00:00 PM GMT",
+      "next_draw_jackpot": "€ 17 Million",
+      "play_link": "https://www.thelotter.com/play.aspx?lotteryid=99&itemid=1",
+      "numbers_range": {
+        "amount_to_draw": 5,
+        "min_number": 1,
+        "max_number": 50
+      },
+      "strong_number_range": {
+        "amount_to_draw": 2,
+        "min_number": 1,
+        "max_number": 11
+      }
+    },
+    {
+      "id": "https://www.thelotter.com/play.aspx?lotteryid=25&itemid=1",
+      "last_draw_date": "16/05/2017 04:00:00 AM GMT",
+      "last_draw_results": "5;28;33;38;42 + 19",
+      "lottery_logo": "http://design.des/[LP]/lotto_LP/bestLotteryTest/img/powerBall_210x100.png",
+      "lottery_name": "U.S. - Powerball",
+      "next_draw_date": "19/02/2017 02:00:00 AM GMT",
+      "next_draw_jackpot": "$ 349 Million",
+      "play_link": "https://www.thelotter.com/play.aspx?lotteryid=25&itemid=1",
+      "numbers_range": {
+        "amount_to_draw": 5,
+        "min_number": 1,
+        "max_number": 69
+      },
+      "strong_number_range": {
+        "amount_to_draw": 1,
+        "min_number": 1,
+        "max_number": 26
+      }
+    }
+  ]
+}
