@@ -171,12 +171,9 @@ document.addEventListener('DOMContentLoaded', event => {
         cleanHtml(search_result_container);  // Reset input & iframe div's
         cleanHtml(iframe_container);  // Reset input & iframe div's
         removeClass(iframe_container, 'fadeAnimation'); // remove class animation
+        removeClass(clear_history_btn, 'disabled');
 
         let LH_history_length = JSON.parse(localStorage.historyArr);
-
-///////////////////////////////////////////// finish it ///////////////////////////////////////////////////////////////
-        removeClass(clear_history_btn, 'disabled');
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         // Loop over history searches.
         for (let value of LH_history_length) {
@@ -193,7 +190,6 @@ document.addEventListener('DOMContentLoaded', event => {
                 search_btn.click(); //trigger search btn
             });
         }
-
     });
 
     /*-------- Clear history btn click event --------*/
