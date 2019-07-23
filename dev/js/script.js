@@ -215,9 +215,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
         var LH_history_length = JSON.parse(localStorage.historyArr);
 
-        ///////////////////////////////////////////// finish it ///////////////////////////////////////////////////////////////
         removeClass(clear_history_btn, 'disabled');
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         // Loop over history searches.
         var _iteratorNormalCompletion2 = true;
